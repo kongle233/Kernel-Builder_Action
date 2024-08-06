@@ -25,7 +25,11 @@ jobs:
 
     - name: Download kernel source
       run: |
-        git clone https://github.com/lineage-ovaltine-dev/android_kernel_modules_and_devicetree_oneplus_sm8475 kernel_workspace --depth=1
+        mkdir -p kernel_workspace/kernel_platform/qcom/proprietary
+        cd kernel_workspace/kernel_platform/qcom/proprietary
+        git clone https://github.com/cupid-development/android_kernel_xiaomi_sm8450-devicetrees devicetree
+        cd $GITHUB_WORKSPACE/kernel_workspace/kernel_platform
+        git clone https://github.com/cupid-development/android_kernel_xiaomi_sm8450-modules vendor
         cd $GITHUB_WORKSPACE/kernel_workspace
         cd kernel_platform
         git clone https://github.com/cupid-development/android_kernel_xiaomi_sm8450 common --depth=1
