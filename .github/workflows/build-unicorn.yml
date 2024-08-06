@@ -28,9 +28,8 @@ jobs:
         git clone https://github.com/lineage-ovaltine-dev/android_kernel_modules_and_devicetree_oneplus_sm8475 kernel_workspace --depth=1
         cd $GITHUB_WORKSPACE/kernel_workspace
         cd kernel_platform
-        git clone https://github.com/PoXiao777/android_kernel_oneplus_sm8550 common --depth=1
-        wget https://github.com/PoXiao777/Kernel-Builder_Action/raw/main/patches/last_defconfig
-        mv last_defconfig common/arch/arm64/configs/gki_defconfig
+        git clone https://github.com/cupid-development/android_kernel_xiaomi_sm8450 common --depth=1
+        
         
     - name: Download Clang-aosp
       run: |
@@ -63,8 +62,7 @@ jobs:
         make -j"$THREAD" O=${OUT_DIR} "${TOOL_ARGS[@]}"
         make -j"$THREAD" O=${OUT_DIR} "${TOOL_ARGS[@]}" INSTALL_MOD_PATH="." INSTALL_MOD_STRIP=1 modules_install
         
-        rm -rf $GITHUB_WORKSPACE/kernel_workspace/out/lib/modules/5.15.123-Pro+/build
-        rm -rf $GITHUB_WORKSPACE/kernel_workspace/out/lib/modules/5.15.123-Pro+/source
+        
         
     - name: Make Anykernel3
       run: |
