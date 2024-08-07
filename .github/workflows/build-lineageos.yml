@@ -31,7 +31,7 @@ jobs:
         chmod a+x ~/.local/bin/repo
         
         cd kernel_workspace
-        repo init -u https://github.com/xiaomi-sm8450-kernel/manifest.git -b zeus-s-oss
+        repo init -u https://github.com/xiaomi-sm8450-kernel/manifest.git -b zeus-s-oss --depth=1
         echo success1
         echo success2
         repo sync
