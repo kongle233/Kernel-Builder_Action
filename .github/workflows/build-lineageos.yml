@@ -32,6 +32,8 @@ jobs:
         
         cd kernel_workspace
         repo init -u https://github.com/xiaomi-sm8450-kernel/manifest.git -b zeus-s-oss
+        echo success1
+        echo success2
         repo sync
         ./build.sh cupid
         
