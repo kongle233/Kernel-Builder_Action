@@ -26,17 +26,12 @@ jobs:
     - name: Download kernel source
       run: |
         cd kernel_workspace
-        repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+        repo init -u https://github.com/xiaomi-sm8450-kernel/manifest.git -b zeus-s-oss
         repo sync
-        source build/envsetup.sh
-        breakfast sunfish
+        ./build.sh cupid
+        
        
 
-    - name: Build kernel
-      run: |
-        source build/envsetup.sh
-        breakfast sunfish
-        mka kernel
         
         
     - name: Make Anykernel3
