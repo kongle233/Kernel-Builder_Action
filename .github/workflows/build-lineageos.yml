@@ -51,9 +51,10 @@ jobs:
         wget https://github.com/kongle233/Kernel-Builder_Action/releases/download/cxk/repokernel.tgz
         tar zxvf repokernel.tgz
         rm repokernel.tgz
-        echo success1
-        repo sync
-        echo ok
+        echo success
+
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master
         
       
 
