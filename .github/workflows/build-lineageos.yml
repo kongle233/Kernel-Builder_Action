@@ -35,11 +35,11 @@ jobs:
         tar zxvf repokernel.tgz
         rm repokernel.tgz
         echo success1
-        repo sync
-        echo ok
-        ./build.sh cupid
         
-       
+        
+      
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master
 
         
         
