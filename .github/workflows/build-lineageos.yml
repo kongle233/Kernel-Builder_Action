@@ -31,10 +31,12 @@ jobs:
         chmod a+x ~/.local/bin/repo
         
         cd kernel_workspace
-        repo init -u https://github.com/xiaomi-sm8450-kernel/manifest.git -b zeus-s-oss --depth=1
+        wget https://github.com/kongle233/Kernel-Builder_Action/releases/download/cxk/repokernel.tgz
+        tar zxvf repokernel.tgz
+        rm repokernel.tgz
         echo success1
-        echo success2
         repo sync
+        echo ok
         ./build.sh cupid
         
        
