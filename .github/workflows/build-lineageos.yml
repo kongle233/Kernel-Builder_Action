@@ -11,10 +11,7 @@ jobs:
       CCACHE_NOHASHDIR: "true"
       CCACHE_HARDLINK: "true"
     steps:
-    - name: Maximize build space
-      uses: easimon/maximize-build-space@master
-      with:
-        remove-dotnet: 'true'
+    
     - name: Set swap to 10G
       uses: pierotofy/set-swap-space@master
       with:
