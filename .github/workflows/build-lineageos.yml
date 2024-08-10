@@ -46,9 +46,9 @@ jobs:
         chmod a+x ~/.local/bin/repo
         
         cd kernel_workspace
-        wget https://github.com/kongle233/Kernel-Builder_Action/releases/download/cxk/repokernel.tgz
-        tar zxvf repokernel.tgz
-        rm repokernel.tgz
+        wget https://github.com/kongle233/Kernel-Builder_Action/releases/download/cxk/reposk.tgz
+        tar zxvf repo*.tgz
+        rm repo*.tgz
         echo success
 
     - name: Setup Debug Session
